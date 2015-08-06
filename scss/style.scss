@@ -10,8 +10,12 @@ html{
   margin: 0;
 }
 
+.bg{
+  opacity: .4;
+}
+
 .illustration{
-  background-color: #181a21;
+  background-color: #2a314a;
   width: 1920px;
   height: 960px;
   position: relative;
@@ -34,8 +38,8 @@ html{
   background-color: #45c9f5;
   position: absolute;
   border-radius: 50%;
-  left:  975px;
-  top: 345px;
+  left:  828px;
+  top: 325px;
   overflow: hidden;
   .texture{
     position: absolute;
@@ -86,13 +90,13 @@ html{
 
 @include keyframes(teeth){
 	0%{
-    @include transform(translateY(-6px));
+    @include transform(translateY(-10px));
 	}
   50%{
-    @include transform(translateY(6px));
+    @include transform(translateY(10px));
   }
 	100%{
-		@include transform(translateY(-6px));
+		@include transform(translateY(-10px));
 	}
 }
 
@@ -112,8 +116,34 @@ html{
 	}
 }
 
-.static{
-  background-size: auto;
-  background-repeat: repeat;
-  opacity: .1;
+.tongue{
+  @include animation('tongue 2s ease-in-out forwards infinite');
+}
+
+@include keyframes(tongue){
+	0%{
+    @include transform(translateY(0px));
+	}
+  50%{
+    @include transform(translateY(-10px));
+  }
+	100%{
+		@include transform(translateY(0px));
+	}
+}
+
+.bottom-tooth{
+  @include animation('bottom-tooth 2s ease-in-out forwards infinite');
+}
+
+@include keyframes(bottom-tooth){
+	0%{
+    @include transform(translateY(0px));
+	}
+  50%{
+    @include transform(translateY(10px));
+  }
+	100%{
+		@include transform(translateY(0px));
+	}
 }
