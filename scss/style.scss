@@ -111,3 +111,9 @@ html{
 		@include transform(translateX(-6px));
 	}
 }
+
+.static{
+  background-size: auto;
+  background-repeat: repeat;
+  opacity: .1;
+}
