@@ -1,0 +1,22 @@
+@mixin appearance($val){
+  appearance: $val;
+  -moz-appearance: $val;
+  -webkit-appearance: $val;
+}
+
+@mixin placeholder {
+  &.placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-webkit-input-placeholder { @content }
+}
+
+@mixin transition($val){
+  -webkit-transition: $val;
+  transition: $val;
+}
+
+@mixin transform($val){
+  -ms-transform: $val;
+  -webkit-transform: $val;
+  transform: $val;
+}

@@ -1,0 +1,113 @@
+@import "./helpers/_prefixes.scss";
+@import "./helpers/_animation.scss";
+
+html{
+  background-color: #000;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.illustration{
+  background-color: #181a21;
+  width: 1920px;
+  height: 960px;
+  position: relative;
+}
+
+.layer{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 960px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.earth{
+  width: 250px;
+  height: 250px;
+  background-color: #45c9f5;
+  position: absolute;
+  border-radius: 50%;
+  left:  975px;
+  top: 345px;
+  overflow: hidden;
+  .texture{
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include animation('earth-rotation 4s linear forwards infinite');
+  }
+  .earth-tile{
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .earth-tile--2{
+    left: 500px;
+  }
+}
+
+@include keyframes(earth-rotation){
+	0%{
+		left: 0;
+	}
+	100%{
+		left: -500px;
+	}
+}
+
+.clouds{
+  @include animation('clouds 2s ease-in-out forwards infinite');
+}
+
+@include keyframes(clouds){
+	0%{
+    @include transform(translateY(0px));
+	}
+  50%{
+    @include transform(translateY(-10px));
+  }
+	100%{
+		@include transform(translateY(0px));
+	}
+}
+
+.teeth{
+  @include animation('teeth 2s ease-in-out forwards infinite');
+}
+
+@include keyframes(teeth){
+	0%{
+    @include transform(translateY(-6px));
+	}
+  50%{
+    @include transform(translateY(6px));
+  }
+	100%{
+		@include transform(translateY(-6px));
+	}
+}
+
+.satellite{
+  @include animation('satellite 4s ease-in-out forwards infinite');
+}
+
+@include keyframes(satellite){
+	0%{
+    @include transform(translateX(-6px));
+	}
+  50%{
+    @include transform(translateX(6px));
+  }
+	100%{
+		@include transform(translateX(-6px));
+	}
+}

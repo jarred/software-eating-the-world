@@ -1,0 +1,20 @@
+{
+  "name": "software-eating-the-world",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@jarred",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^0.15.6",
+    "gsap": "^1.17.0",
+    "node-sass": "^3.2.0",
+    "sass-loader": "^1.0.4",
+    "sizzle": "^2.2.0",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.10.5"
+  }
+}
